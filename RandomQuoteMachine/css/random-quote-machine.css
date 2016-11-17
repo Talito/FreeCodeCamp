@@ -1,0 +1,50 @@
+/*!
+ Jose Antonio 
+ */
+body {
+ 	background: url('../img/crazy-background.jpg');
+ 	padding-top: 3%;
+ 	background-repeat: no-repeat;
+ 	display: compact;
+}
+
+#random-quote-machine-title, #the-quote {
+	color: white;
+}
+
+#the-quote {
+	border-bottom-width: 0.5em;
+	border-color: white;
+	padding: 2em;
+	font-size: 2em;
+}
+
+#the-author {
+	text-align: right;
+	font-size: 1.2em;
+	margin-right: 2%;
+	font-weight: bold;
+	color: white;
+}
+
+#magic-box {
+	border-width: 0.15em;
+	margin-top: 7em;
+	margin-right: 15em;
+	margin-left: 15em;
+	padding: 1.1em;
+	border-style: solid;
+	border-color: white;
+	border-radius: 25px;
+	background-color: rgba(192,192,192,0.6);
+}
+
+#btn-wiser, #btn-spread {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+footer {
+	color: white;
+	font-weight: bold;
+}

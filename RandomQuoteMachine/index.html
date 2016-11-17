@@ -3,22 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <meta name="keywords" content="jose antonio, cv, software engineer, learn Spanish, psychology, cv, side projects, front-end"/>
-    <meta name="description" content="Personal web-CV for Jose">
+    <meta name="keywords" content="random quote machine, wikipedia, quote, smart people"/>
+    <meta name="description" content="A web app for getting wiser by randomly quoting wiser people">
     <meta name="author" content="Jose">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Jose's Corner</title>
+    <title>Random Quote Machine</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/footer-distributed-with-address-and-phones.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cookie">
-    <link rel="stylesheet" type="text/css" href="css/application.css">
+    <link rel="stylesheet" type="text/css" href="css/random-quote-machine.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,10 +27,45 @@
     <![endif]-->
   </head>
   <body>
-    
+    <div class="container text-center">
+        <h1 id="random-quote-machine-title">RANDOM QUOTE MACHINE</h1>
+        <div class="row">
+            <div id="magic-box">
+                <div class="row">
+                    <p id="the-quote">...</p>
+                    <p id="the-author">Said nobody</p>
+                </div> <!-- row: the quote -->
+                <div class="row">
+                    
+                    <button id="btn-spread" type="button" class="btn btn-primary">
+                        <a href="https://twitter.com/share" 
+                        class="twitter-share-button" 
+                        data-text="Random text"
+                        data-url="http://www.josescorner.com/random-quote-machine"
+                        data-hashtags="jose, freecodecamp, randomquotemachine"
+                        data-show-count="false">
+                        <i class="fa fa-twitter"></i>
+                            Spread the Word
+                        </a>
+
+                    </button>
+                    <button id="btn-wiser" type="button" class="btn btn-default" onclick="getRandomQuote()">Click for being wiser...</button>
+                </div> <!-- row: the wise buttons -->
+            </div> <!-- magic box -->
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <footer class="text-center">
+        The Random Quote Machine &copy; by Jose - 2016
+    </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Files by Jose -->
+    <script src="js/random-quote-machine-functionality.js"></script>
+    <!-- Needed APIs -->
+    <script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   </body>
 </html>
